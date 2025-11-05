@@ -1,4 +1,4 @@
-# New Requirement
+# New Requirement 1
 
 Adjust the App.tsx page layout to include top navigation bar, left sidebar menu, and bottom information bar, with content area in the middle.
 
@@ -13,7 +13,7 @@ Add two content area components:
 - Settings component: Displays system configuration options, such as theme, notification settings, etc.
 
 
-# New Requirement
+# New Requirement 2
 
 Please adjust the APITester.tsx page to add HTTP header input boxes, allowing users to customize request header information.
 
