@@ -1,81 +1,81 @@
 # Bun React Demo
 
-一个基于 [Bun](https://bun.sh/) 和 [React](https://react.dev/) 的全栈应用示例项目。展示了如何使用 Bun 作为运行时、构建工具和包管理器来构建现代化的 React 应用。
+A full-stack application demo project based on [Bun](https://bun.sh/) and [React](https://react.dev/). Demonstrates how to use Bun as a runtime, build tool, and package manager to build modern React applications.
 
-## 技术栈
+## Tech Stack
 
-- **Bun**: 最新版本 (JavaScript 运行时和工具链)
+- **Bun**: Latest version (JavaScript runtime and toolchain)
 - **React**: 19.2
 - **React DOM**: 19.2
 - **Tailwind CSS**: 4.1.11
-- **TypeScript**: 支持
+- **TypeScript**: Supported
 
-## 项目结构
+## Project Structure
 
 ```
 bun-react-demo/
 ├── src/
-│   ├── index.ts         # 服务器入口，API 路由和静态文件服务
-│   ├── index.html       # HTML 模板
-│   ├── App.tsx          # React 主组件
-│   ├── frontend.tsx     # 前端入口
-│   ├── APITester.tsx    # API 测试组件
-│   ├── index.css        # 全局样式
-│   └── logo.svg         # 资源文件
-├── build.ts             # 构建脚本
-├── package.json         # 项目依赖配置
-├── tsconfig.json        # TypeScript 配置
-├── bunfig.toml          # Bun 配置文件
+│   ├── index.ts         # Server entry point, API routes and static file serving
+│   ├── index.html       # HTML template
+│   ├── App.tsx          # Main React component
+│   ├── frontend.tsx     # Frontend entry point
+│   ├── APITester.tsx    # API testing component
+│   ├── index.css        # Global styles
+│   └── logo.svg         # Asset file
+├── build.ts             # Build script
+├── package.json         # Project dependency configuration
+├── tsconfig.json        # TypeScript configuration
+├── bunfig.toml          # Bun configuration file
 └── README.md
 ```
 
-## 功能特性
+## Features
 
-- 全栈应用（前端 + 后端）
-- React 19 支持
-- Tailwind CSS 样式
-- 热模块替换 (HMR)
-- API 路由处理
-- 静态文件服务
-- TypeScript 支持
+- Full-stack application (frontend + backend)
+- React 19 support
+- Tailwind CSS styling
+- Hot Module Replacement (HMR)
+- API route handling
+- Static file serving
+- TypeScript support
 
-## 快速开始
+## Quick Start
 
-### 前置要求
+### Prerequisites
 
-- [Bun](https://bun.sh/) 最新版本
+- [Bun](https://bun.sh/) latest version
 
-### 安装和运行
+### Installation and Running
 
 ```bash
-# 安装依赖（Bun 会自动处理）
+# Install dependencies (Bun handles this automatically)
 bun install
 
-# 运行开发服务器
+# Run development server
 bun run dev
 ```
 
-应用将在 `http://localhost:3000` 启动，支持热重载。
-注：3000 端口是 bun 的默认端口。
+The application will start at `http://localhost:3000` with hot reload support.
+Note: Port 3000 is Bun's default port.
 
-### 生产构建
+### Production Build
 
 ```bash
-# 构建项目
+# Build project
 bun run build
 
-# 运行生产版本
+# Run production version
 bun run start
 ```
 
-## API 端点
+## API Endpoints
 
 ### Hello API
 ```http
 GET http://localhost:3000/api/hello
 PUT http://localhost:3000/api/hello
 ```
-响应示例:
+Response example:
 ```json
 {
   "message": "Hello, world!",
@@ -83,72 +83,72 @@ PUT http://localhost:3000/api/hello
 }
 ```
 
-### 带参数的 Hello API
+### Parameterized Hello API
 ```http
 GET http://localhost:3000/api/hello/:name
 ```
-响应示例:
+Response example:
 ```json
 {
   "message": "Hello, Alice!"
 }
 ```
 
-## 代码说明
+## Code Description
 
-### 服务器 (`src/index.ts`)
+### Server (`src/index.ts`)
 
-Bun 服务器配置：
-- **静态文件服务**: 所有未匹配的路由返回 `index.html`（支持 React Router）
-- **API 路由**: `/api/hello` 和 `/api/hello/:name`
-- **开发模式**: 启用 HMR 和浏览器控制台日志
+Bun server configuration:
+- **Static file serving**: All unmatched routes return `index.html` (supports React Router)
+- **API routes**: `/api/hello` and `/api/hello/:name`
+- **Development mode**: Enables HMR and browser console logging
 
-### React 应用 (`src/App.tsx`)
+### React Application (`src/App.tsx`)
 
-主 React 组件：
-- 展示 Bun 和 React 标志
-- 包含 API 测试组件
-- 使用 Tailwind CSS 进行样式设计
+Main React component:
+- Displays Bun and React logos
+- Includes API testing component
+- Uses Tailwind CSS for styling
 
-### API 测试组件 (`src/APITester.tsx`)
+### API Testing Component (`src/APITester.tsx`)
 
-用于测试后端 API 的交互式组件。
+Interactive component for testing the backend API.
 
-## 开发特性
+## Development Features
 
-### 热模块替换 (HMR)
+### Hot Module Replacement (HMR)
 
-在开发模式下，修改代码会自动刷新浏览器，无需手动刷新。
+In development mode, code changes automatically refresh the browser without manual refresh.
 
-### TypeScript 支持
+### TypeScript Support
 
-项目完全使用 TypeScript 编写，提供类型安全。
+The project is fully written in TypeScript, providing type safety.
 
 ### Tailwind CSS
 
-使用 Tailwind CSS 4.x 进行样式设计，支持 JIT 编译。
+Uses Tailwind CSS 4.x for styling with JIT compilation support.
 
-## 构建和部署
+## Build and Deployment
 
-### 构建
+### Building
 
 ```bash
 bun run build
 ```
 
-构建脚本会：
-- 编译 TypeScript
-- 处理 React 组件
-- 优化资源文件
-- 生成生产就绪的构建
+The build script will:
+- Compile TypeScript
+- Process React components
+- Optimize asset files
+- Generate production-ready build
 
-### 环境变量
+### Environment Variables
 
-可以通过环境变量配置：
-- `NODE_ENV`: 设置为 `production` 以禁用开发特性
+Can be configured via environment variables:
+- `NODE_ENV`: Set to `production` to disable development features
 
-## 参考资源
+## References
 
-- [Bun 官方网站](https://bun.sh/)
-- [React 文档](https://react.dev/)
-- [Tailwind CSS 文档](https://tailwindcss.com/)
+- [Bun Official Website](https://bun.sh/)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/)
