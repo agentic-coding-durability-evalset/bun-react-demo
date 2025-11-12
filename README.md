@@ -48,10 +48,6 @@ bun-react-demo/
 ### 安装和运行
 
 ```bash
-# 克隆项目
-git clone <repository-url>
-cd bun-react-demo
-
 # 安装依赖（Bun 会自动处理）
 bun install
 
