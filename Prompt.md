@@ -1,5 +1,9 @@
-# New Requirement
+## Task 1
 
+**Task Type:** Feature Implementation
+
+**Prompt:**
+```
 Adjust the App.tsx page layout to include top navigation bar, left sidebar menu, and bottom information bar, with content area in the middle.
 
 - Top navigation bar contains application name, Logo, and user information (displayed on the far right).
@@ -11,13 +15,17 @@ Add two content area components:
 
 - Dashboard component (default): Displays the main statistics and charts of the application.
 - Settings component: Displays system configuration options, such as theme, notification settings, etc.
+```
 
+## Task 2
 
-# New Requirement
+**Task Type:** Feature Implementation
 
+**Prompt:**
+```
 Please adjust the APITester.tsx page to add HTTP header input boxes, allowing users to customize request header information.
 
 - Users can add multiple headers, each header contains key and value input boxes.
 - When sending requests, these custom headers will be included in the HTTP request.
-
+```
 
